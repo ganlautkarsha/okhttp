@@ -262,7 +262,7 @@ public final class ConnectionSpec {
     @Nullable String[] tlsVersions;
     boolean supportsTlsExtensions;
 
-    Builder(boolean tls) {
+    public Builder(boolean tls) {
       this.tls = tls;
     }
 
@@ -272,6 +272,7 @@ public final class ConnectionSpec {
       this.tlsVersions = connectionSpec.tlsVersions;
       this.supportsTlsExtensions = connectionSpec.supportsTlsExtensions;
     }
+
 
     public Builder allEnabledCipherSuites() {
       if (!tls) throw new IllegalStateException("no cipher suites for cleartext connections");

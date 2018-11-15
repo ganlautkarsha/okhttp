@@ -14,14 +14,14 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package okhttp3.internal.huc;
+package okhttp3.urlconnection.internal.huc;
 
 import java.net.URL;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLSocketFactory;
 import okhttp3.Handshake;
 import okhttp3.OkHttpClient;
-import okhttp3.internal.URLFilter;
+import okhttp3.urlconnection.internal.URLFilter;
 
 public final class OkHttpsURLConnection extends DelegatingHttpsURLConnection {
   private final OkHttpURLConnection delegate;

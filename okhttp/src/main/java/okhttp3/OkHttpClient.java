@@ -198,7 +198,7 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
     };
   }
 
-  final Dispatcher dispatcher;
+  public final Dispatcher dispatcher;
   final @Nullable Proxy proxy;
   final List<Protocol> protocols;
   final List<ConnectionSpec> connectionSpecs;
@@ -216,7 +216,7 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
   final CertificatePinner certificatePinner;
   final Authenticator proxyAuthenticator;
   final Authenticator authenticator;
-  final ConnectionPool connectionPool;
+  public final ConnectionPool connectionPool;
   final Dns dns;
   final boolean followSslRedirects;
   final boolean followRedirects;

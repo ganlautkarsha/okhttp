@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package okhttp3;
+package okhttp3.urlconnection;
 
 import java.net.HttpURLConnection;
 import java.net.Proxy;
@@ -21,9 +21,11 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLStreamHandler;
 import java.net.URLStreamHandlerFactory;
-import okhttp3.internal.URLFilter;
-import okhttp3.internal.huc.OkHttpURLConnection;
-import okhttp3.internal.huc.OkHttpsURLConnection;
+
+import okhttp3.OkHttpClient;
+import okhttp3.urlconnection.internal.URLFilter;
+import okhttp3.urlconnection.internal.huc.OkHttpURLConnection;
+import okhttp3.urlconnection.internal.huc.OkHttpsURLConnection;
 
 /**
  * @deprecated OkHttp will be dropping its ability to be used with {@link HttpURLConnection} in an
@@ -47,7 +49,7 @@ public final class OkUrlFactory implements URLStreamHandlerFactory, Cloneable {
     return this;
   }
 
-  void setUrlFilter(URLFilter filter) {
+  public void setUrlFilter(URLFilter filter) {
     urlFilter = filter;
   }
 

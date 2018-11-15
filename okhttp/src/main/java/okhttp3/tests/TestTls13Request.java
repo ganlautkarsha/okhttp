@@ -1,9 +1,11 @@
-package okhttp3;
+package okhttp3.tests;
 
 import java.io.IOException;
 import java.security.Security;
 import java.util.Arrays;
 import java.util.List;
+
+import okhttp3.*;
 import okhttp3.internal.platform.Platform;
 import org.conscrypt.Conscrypt;
 
