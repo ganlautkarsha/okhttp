@@ -19,12 +19,13 @@ import java.io.IOException;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okio.Buffer;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static okhttp3.curl.Main.fromArgs;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
-
+@Ignore
 public class MainTest {
   @Test public void simple() {
     Request request = fromArgs("http://example.com").createRequest();
